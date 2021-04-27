@@ -1,20 +1,31 @@
 <html>
   <head>
-    <title><%=title%></title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>
+      
+      <%=title%></title>
   </head>
   <body>
-    <header><h1>To Do List</h1></header>
+    <div class="header"><h1><i class="fas fa-clipboard-list"></i>&nbsp To Do App</h1></div>
     <div class="main-container">
       <!-- left side container
         which contains list title names 
         -->
       <div class="list-title">
-            <div>
+            <div class="sub-container">
                 <p>DESCRIPTION</p>
-                <input type="text" name="description" required />
+                <input id="des-input" type="text" name="description" placeholder="What do ypu need to do ?" required />
             </div>
 
-            <div>
+            <div class="sub-container">
                 <p>CATEGORY</p>
                 <select name="category">
                     <option value="school">School</option>
@@ -24,6 +35,11 @@
                     <option value="reminders">reminders</option>
                 </select>
             </div>  
+
+            <div class="sub-container"> 
+              <p>Data</p>
+              <input type="date" required>
+            </div>
             <button type="submit">Add Task</button>
         </div>
         <!-- right side container
