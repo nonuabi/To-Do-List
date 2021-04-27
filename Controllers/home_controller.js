@@ -1,3 +1,5 @@
 module.exports.titleName = function (req, res) {
-  return res.end("<h1>Name</h1>");
+  return res.render("home", {
+    title: "To Do List",
+  });
 };

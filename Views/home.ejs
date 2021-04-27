@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title><%=title%></title>
+  </head>
+  <body>
+    <header><h1>To Do List</h1></header>
+    <div class="main-container">
+      <!-- left side container
+        which contains list title names 
+        -->
+      <div class="list-title">
+            <div>
+                <p>DESCRIPTION</p>
+                <input type="text" name="description" required />
+            </div>
+
+            <div>
+                <p>CATEGORY</p>
+                <select name="category">
+                    <option value="school">School</option>
+                    <option value="work">Work</option>
+                    <option value="shopping">hopping</option>
+                    <option value="grocery">Grocery</option>
+                    <option value="reminders">reminders</option>
+                </select>
+            </div>  
+            <button type="submit">Add Task</button>
+        </div>
+        <!-- right side container
+        which contains list items -->
+        <div class="list-items"></div>
+      </div>
+    </div>
+  </body>
+</html>
