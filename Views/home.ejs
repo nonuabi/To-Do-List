@@ -21,31 +21,39 @@
         -->
       <div class="list-title">
             <div class="sub-container">
-                <p>DESCRIPTION</p>
+                <p><i class="fas fa-long-arrow-alt-down"></i>&nbsp DESCRIPTION</p>
                 <input id="des-input" type="text" name="description" placeholder="What do ypu need to do ?" required />
             </div>
+            
+            <div class="cat-date-merge">
+              <div class="sub-container" id="category">
+                  <p><i class="fas fa-ellipsis-v"></i>&nbsp CATEGORY</p>
+                  <select name="category" >
+                    <option value="" disabled selected hidden>Select </option>
+                      <option value="school">School</option>
+                      <option value="work">Work</option>
+                      <option value="shopping">Shopping</option>
+                      <option value="grocery">Grocery</option>
+                      <option value="reminders">Reminders</option>
+                      <option value="other">Other</option>
+                  </select>
+              </div>  
 
-            <div class="sub-container">
-                <p>CATEGORY</p>
-                <select name="category">
-                    <option value="school">School</option>
-                    <option value="work">Work</option>
-                    <option value="shopping">hopping</option>
-                    <option value="grocery">Grocery</option>
-                    <option value="reminders">reminders</option>
-                </select>
-            </div>  
-
-            <div class="sub-container"> 
-              <p>Data</p>
-              <input type="date" required>
+              <div class="sub-container" id="date"> 
+                <p><i class="fas fa-calendar-week"></i>&nbsp Date</p>
+                <input type="date"  name="date" required>
+              </div>
             </div>
-            <button type="submit">Add Task</button>
+            <button type="submit"><i class="fas fa-plus"></i>&nbsp Add a task</button>
+
+            <div class="list"></div>
+
         </div>
         <!-- right side container
         which contains list items -->
         <div class="list-items"></div>
       </div>
     </div>
+    <script src="/js/script.js" type="text/javaScript"></script>
   </body>
 </html>
