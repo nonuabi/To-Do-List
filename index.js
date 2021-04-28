@@ -1,17 +1,19 @@
 const express = require("express");
 const port = 8000;
-const db = require("./Config/mongoose");
-const todolist = require("./Models/Schema");
+require("./Config/mongoose");
+
 
 const app = express();
 
-app.use("/", require("./Routers"));
+
+
+var bodyParser = require("body-parser");
 
 app.set("view engine", "ejs");
 app.set("views", "./Views");
-
-
 app.use(express.static("Assets"));
+app.use(bodyParser.urlencoded({extended:false}));
+app.use("/", require("./Routers"));
 
 app.listen(port, function (err) {
   if (err) {

@@ -9,7 +9,7 @@ const todoSchema = new mongoose.Schema({
     type: String,
   },
   date: {
-    type: Number,
+    type: String,
   },
 });
 

@@ -19,7 +19,9 @@
       <!-- left side container
         which contains list title names 
         -->
+      
       <div class="list-title">
+        <form action="/create-data" method="POST">
             <div class="sub-container">
                 <p><i class="fas fa-long-arrow-alt-down"></i>&nbsp DESCRIPTION</p>
                 <input id="des-input" type="text" name="description" placeholder="What do ypu need to do ?" required />
@@ -45,6 +47,7 @@
               </div>
             </div>
             <button id="add-btn"  type="submit"><i class="fas fa-plus"></i>&nbsp Add a task</button>
+            </form>
 
             <div class="list"></div>
 
@@ -52,9 +55,26 @@
         <!-- right side container
         which contains list items -->
         <div class="list-items">
-          <div >
-            <p></p>
-          </div>
+          <!-- print -->
+          <%if(!err){%>
+            <ul>
+              <% for(let i of arr){ %>
+                    <li>
+                      <div>
+                        <div>
+                          <p><%= i.description%></p>
+                        </div>
+                        <div>
+                          <p><%= i.category%></p>
+                        </div>
+                      </div>
+                      <div>
+                        <p><%= i.date%></p>
+                      </div>
+                    </li>
+              <%}%>
+          </ul>
+        <%}%>
         </div>
       </div>
     </div>

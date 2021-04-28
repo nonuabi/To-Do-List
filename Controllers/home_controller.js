@@ -1,5 +1,19 @@
+const Task = require("../Models/Schema");
+
 module.exports.titleName = function (req, res) {
-  return res.render("home", {
-    title: "To Do List",
+  Task.find({}, function (err, data) {
+    if (err) {
+      console.log("!!!");
+      return res.render("home", {
+        title: "To Do List",
+        err: "error",
+        arr: undefined,
+      });
+    }
+    return res.render("home", {
+      title: "To Do List",
+      arr: data,
+      err: undefined,
+    });
   });
 };
