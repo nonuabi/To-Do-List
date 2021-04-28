@@ -36,7 +36,7 @@
                       <option value="work">Work</option>
                       <option value="shopping">Shopping</option>
                       <option value="grocery">Grocery</option>
-                      <option value="reminders">Reminders</option>
+                      
                       <option value="other">Other</option>
                   </select>
               </div>  
@@ -50,7 +50,11 @@
             </form>
 
             <div class="list">
-              <div class="category-title"><p><i class="fas fa-bars">&nbsp Shopping</i></p></div>
+              <div class="category-title"><p>&nbsp<i class="fas fa-school">&nbsp School</i></p></div>
+              <div class="category-title"><p>&nbsp<i class="fas fa-business-time">&nbsp Work</i></p></div>
+              <div class="category-title"><p>&nbsp<i class="fas fa-shopping-cart">&nbsp Shopping</i></p></div>
+              <div class="category-title"><p>&nbsp<i class="fas fa-shopping-basket">&nbsp Grocery</i></p></div>
+              <div class="category-title"><p>&nbsp<i class="fas fa-align-justify">&nbsp Other</i></p></div>
             </div>
 
         </div>
@@ -59,20 +63,28 @@
         <div class="list-items">
           <!-- print -->
           <%if(!err){%>
-            <ul>
+            <ul >
               <% for(let i of arr){ %>
                     <li>
-                      <div>
-                        <div>
-                          <p><%= i.description%></p>
+                      <div class="display-container">
+                        <div class="des-date-container">
+                          <div id="descrip">
+                            <p><%= i.description%></p>
+                          </div>
+                          <div id="date">
+                          <p><%= i.date%></p>
                         </div>
-                        <div>
-                          <p><%= i.category%></p>
+                        </div>
+                        
+
+                        <div class="cate-del-container">
+                        <div class="cate-container">
+                            <p>  {   <%= i.category%> } </p>
+                        </div>
+                        <div class="delete-btn"><a href="/delete-list/?id=<%= i.id%>"> <i class="fas fa-heart-broken"></i></a></div>
                         </div>
                       </div>
-                      <div>
-                        <p><%= i.date%></p>
-                      </div>
+                      
                     </li>
               <%}%>
           </ul>

@@ -23,7 +23,7 @@ body {
 .list-title {
   width: 30vw;
   height: 100%;
-  /* background-color: gray; */
+
   border: 5px solid #2a8580;
   padding: 5px;
   border-radius: 10px;
@@ -39,7 +39,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  color: gray;
+  color: dimgrey;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
@@ -81,27 +81,73 @@ body {
 /* list container inside .list-title container */
 .list-title .list {
   height: 50%;
-  /* border: 3px solid white; */
-  /* border-top: 3px; */
+
   border-style: solid;
   border-color: white;
-  /* border-top: 3px; */
+
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
 }
+.list .category-title {
+  width: 100%;
 
-/* list items containers */
+  border-bottom: 2px solid #2a8580;
+  border-radius: 0 0 0 10px;
+}
+
 .list-items {
   width: 65vw;
   height: 100%;
   background-color: #d5f1e5;
+  border: 5px solid #2a8580;
   border-radius: 10px;
 }
+.list-items ul {
+  list-style: none;
+}
+.list-items p {
+  margin: 0;
+}
 
-.list .category-title {
-  width: 100%;
-  /* background-color: antiquewhite; */
-  border-bottom: 2px solid #2a8580;
-  border-radius: 0 0 0 10px;
+.list-items .display-container {
+  width: 95%;
+
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-bottom: 2px solid #d5f1e5;
+  border-radius: 10px;
+  font-family: sans-serif;
+  color: dimgrey;
+  padding: 5px;
+}
+
+.list-items .display-container:hover {
+  background-color: #f5f5f5;
+}
+
+.list-items .display-container .des-date-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 10px 0 10px;
+}
+.list-items .display-container #descrip {
+  text-transform: capitalize;
+}
+
+.list-items .display-container .cate-del-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 0 10px;
+}
+
+.list-items .display-container .cate-container {
+  text-transform: capitalize;
+}
+
+.list-items .display-container a {
+  color: red;
+  border: 0;
 }
