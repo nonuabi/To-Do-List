@@ -3,7 +3,7 @@ const Task = require("../Models/Schema");
 module.exports.titleName = function (req, res) {
   Task.find({}, function (err, data) {
     if (err) {
-      console.log("!!!");
+  
       return res.render("home", {
         title: "To Do List",
         err: "error",
