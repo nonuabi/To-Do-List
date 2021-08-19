@@ -1,6 +1,8 @@
 <html>
   <head>
+    <!-- importing css file -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <!-- font awesone cdn -->
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -8,10 +10,11 @@
       crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- title of the page -->
     <title>
-      
-      <%=title%></title>
+      <%=title%>
+    </title>
   </head>
   <body>
     <div class="header"><h1><i class="fas fa-clipboard-list"></i>&nbsp To Do App</h1></div>
@@ -19,14 +22,14 @@
       <!-- left side container
         which contains list title names 
         -->
-      
       <div class="list-title">
         <form action="/create-data" method="POST">
+          <!-- write description container -->
             <div class="sub-container">
                 <p><i class="fas fa-long-arrow-alt-down"></i>&nbsp DESCRIPTION</p>
                 <input id="des-input" type="text" name="description" placeholder="What do you need to do ?" required />
             </div>
-            
+            <!-- choose category container -->
             <div class="cat-date-merge">
               <div class="sub-container" id="category">
                   <p><i class="fas fa-ellipsis-v"></i>&nbsp CATEGORY</p>
@@ -40,15 +43,17 @@
                       <option value="other">Other</option>
                   </select>
               </div>  
-
+              <!-- select data contianer -->
               <div class="sub-container" id="date"> 
                 <p><i class="fas fa-calendar-week"></i>&nbsp Date</p>
                 <input type="date"  name="date" required>
               </div>
             </div>
+            <!-- add test button -->
             <button id="add-btn"  type="submit"><i class="fas fa-plus"></i>&nbsp Add a task</button>
             </form>
 
+            <!-- sorted category wise list  -->
             <div class="list">
               <div class="category-title"><p>&nbsp<i class="fas fa-school">&nbsp School</i></p></div>
               <div class="category-title"><p>&nbsp<i class="fas fa-business-time">&nbsp Work</i></p></div>
@@ -61,7 +66,7 @@
         <!-- right side container
         which contains list items -->
         <div class="list-items">
-          <!-- print -->
+          <!-- printing tasks-->
           <%if(!err){%>
             <ul >
               <% for(let i of arr){ %>
@@ -75,16 +80,13 @@
                           <p><%= i.date%></p>
                         </div>
                         </div>
-                        
-
                         <div class="cate-del-container">
                         <div class="cate-container">
                             <p>  {   <%= i.category%> } </p>
                         </div>
                         <div class="delete-btn"><a href="/delete-list/?id=<%= i.id%>"> <i class="fas fa-trash-alt"></i></a></div>
                         </div>
-                      </div>
-                      
+                      </div>                      
                     </li>
               <%}%>
           </ul>
@@ -92,6 +94,5 @@
         </div>
       </div>
     </div>
-    <script src="/js/script.js" type="text/javaScript"></script>
   </body>
 </html>

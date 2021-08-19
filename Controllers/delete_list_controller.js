@@ -1,5 +1,6 @@
 const todoList = require("../Models/Schema");
 
+//delete item form the data base controler
 module.exports.delete = function (req, res) {
   let id = req.query.id;
 

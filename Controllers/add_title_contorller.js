@@ -1,5 +1,6 @@
 const todolist = require("../Models/Schema");
 
+// adding item to the database conntroller
 module.exports.add = function (req, res) {
   todolist.create(req.body, function (err) {
     if (err) {

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// mongoose schema
 const todoSchema = new mongoose.Schema({
   description: {
     type: String,
@@ -13,5 +14,6 @@ const todoSchema = new mongoose.Schema({
   },
 });
 
+//giving name to the schema model
 const todoList = mongoose.model("todoList", todoSchema);
 module.exports = todoList;

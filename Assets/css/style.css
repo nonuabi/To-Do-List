@@ -2,6 +2,7 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+/* Header Styling */
 .header {
   height: 45px;
   text-align: center;
@@ -19,7 +20,6 @@ body {
 }
 
 /* list title  container*/
-
 .list-title {
   width: 30vw;
   height: 100%;
@@ -28,6 +28,7 @@ body {
   padding: 5px;
   border-radius: 10px;
 }
+/* left subcontainer  */
 .list-title .sub-container {
   height: 80px;
   border-top: 0;
@@ -43,14 +44,18 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
+/* left subcontinaer paragram style */
 .list-title .sub-container p {
   margin: 0;
   text-align: center;
 }
 
+/* left subcontinaer input style */
 .list-title .sub-container input {
   height: inherit;
 }
+
+/* left subcontinaer select style */
 .list-title .sub-container select {
   height: inherit;
 }
@@ -68,6 +73,8 @@ body {
   width: 50%;
   border-left: 1.5px solid white;
 }
+
+/* left subcontainer button */
 .list-title button {
   width: 100%;
   height: 10%;
@@ -96,6 +103,7 @@ body {
   border-radius: 0 0 0 10px;
 }
 
+/* list item styles  */
 .list-items {
   width: 65vw;
   height: 100%;
@@ -110,9 +118,9 @@ body {
   margin: 0;
 }
 
+/* right contianer  */
 .list-items .display-container {
   width: 95%;
-
   display: flex;
   flex-direction: column;
   background-color: white;
