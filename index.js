@@ -1,6 +1,6 @@
 // importing exprss
 const express = require("express");
-//definting port number
+//definting port number 8000
 const port = 8000;
 //importing mongoose model
 require("./Config/mongoose");
