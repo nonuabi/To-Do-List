@@ -1,15 +1,15 @@
-// importing mongoose
+require("dotenv").config();
 const mongoose = require("mongoose");
-//connecting mongoose to the project
-mongoose.connect("mongodb://localhost/to-do-list");
+// mongoDB atlas uri
+const URI = process.env.MONGOSE_ATLAS_URL;
 
-//making a ref of mongoose connection
-const dp = mongoose.connection;
+// connecting to mongoDB atlas
+const connectDB = async () => {
+  await mongoose.connect(URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+  console.log("Connected to DataBase :: MongoDB");
+};
 
-//checking for the errors
-dp.on("error", console.error.bind(console, "connection error to dp!"));
-
-//open the connect
-dp.once("open", function () {
-  console.log("we are connected!");
-});
+module.exports = connectDB;

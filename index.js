@@ -1,15 +1,13 @@
 // importing exprss
 const express = require("express");
+const connectDB = require("./Config/mongoose");
 //definting port number 8000
 const port = process.env.PORT || 8000;
 //importing mongoose model
-require("./Config/mongoose");
-
 //firing express
 const app = express();
 
-//adding body parser
-var bodyParser = require("body-parser");
+connectDB();
 
 //settingUP view engine to ejs
 app.set("view engine", "ejs");
@@ -17,7 +15,7 @@ app.set("views", "./Views");
 
 //using express.static as a middleware to use static files
 app.use(express.static("Assets"));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 
 //definting route
 app.use("/", require("./Routers"));
